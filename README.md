@@ -1,44 +1,47 @@
 # House Price Index (HPI) Database Project
 
-## Overview
-This project involves creating and managing a structured database for analyzing house price trends. The database processes and organizes monthly and quarterly house price index (HPI) data, calculates year-over-year (YoY) changes, and ensures efficient storage and retrieval.
+## 📌 Overview
+The **House Price Index (HPI) Database Project** is designed to analyze trends in housing prices using structured SQL-based data processing. It involves data extraction, transformation, and analysis to track price changes over time on a **monthly** and **quarterly** basis.
 
-## Database Structure
+## 🎯 Objectives
+- **📂 Store and manage** historical HPI data efficiently.
+- **📊 Calculate year-over-year (YoY) changes** for both monthly and quarterly data.
+- **✅ Ensure data integrity and structure** for effective querying and visualization.
+- **📈 Provide insights** into house price trends using analytical tools like Power BI.
 
-### 1. **Database Creation**
-- `house_db` is the primary database used to store all HPI-related data.
-- The raw data is imported into `hpi_master_test` for processing.
+## 🛠️ Features
+### 🔹 Data Organization
+- 📌 Separates raw data into `hpi_monthly` and `hpi_quarterly` tables.
+- ⚡ Indexing for faster query performance.
+- 🔄 Dynamic column adjustments to accommodate different data formats.
 
-### 2. **Tables Created**
-#### `hpi_monthly`
-Stores monthly house price index data.
+### 🔹 Year-over-Year (YoY) Calculation
+- 📈 Uses `LAG()` function to compare prices from the same month/quarter in the previous year.
+- 🚀 Handles missing values to prevent calculation errors.
+- 🎯 Rounds results to two decimal places for clarity.
 
-#### `hpi_quarterly`
-Stores quarterly house price index data.
+### 🔹 Scalability & Performance
+- ⚙️ Well-indexed database design.
+- ⚡ Structured queries for optimized retrieval.
+- 📊 Ready for integration with BI tools for visualization.
 
-## Data Processing
+## 📋 Database Schema
+### Tables:
+1. **hpi_monthly** – Stores monthly house price index data.
+2. **hpi_quarterly** – Stores quarterly house price index data.
+3. **hpi_master_test** – Contains raw imported data.
 
-### 1. **Data Import and Transformation**
-- The `hpi_master_test` table is used as the source.
-- Monthly and quarterly records are separated into `hpi_monthly` and `hpi_quarterly` tables, respectively.
-- The `level` column is adjusted based on the maximum length found in the dataset.
+## 📌 SQL Operations Used
+- **Database Creation**: `CREATE DATABASE house_db;`
+- **Data Import**: `SELECT * FROM hpi_master_test;`
+- **Table Creation**: `CREATE TABLE hpi_monthly (...)` and `CREATE TABLE hpi_quarterly (...);`
+- **Data Insertion**: `INSERT INTO hpi_monthly (...) SELECT ... FROM hpi_master_test;`
+- **YoY Calculation**: Using `LAG()` function and `UPDATE` queries.
+- **Data Cleaning**: Handling `NULL` values and rounding calculations.
 
-### 2. **Calculating Year-over-Year (YoY) Change**
-- A new column `yoy_change` is added to both tables.
-- The `LAG()` function is used to calculate YoY changes:
-  - **Monthly**: Compares the current month's `index_nsa` to the value from 12 months ago.
-  - **Quarterly**: Compares the current quarter's `index_nsa` to the value from 4 quarters ago.
-- Any `NULL` values in `yoy_change` are updated to `0`.
-- Values are rounded to two decimal places for better readability.
+## 📊 Insights & Future Enhancements
+- Incorporate additional economic indicators for deeper analysis.
+- Expand to include regional and national housing data.
+- Automate data updates using ETL pipelines.
 
-## Key SQL Operations
-- **Checking Data Integrity**: Queries check for duplicate records before updating YoY changes.
-- **Indexing**: Ensures efficient searches by indexing `place_name`, `yr`, and `period`.
-- **Updating Records**: Safe updates are handled using `SET SQL_SAFE_UPDATES`.
-
-## Usage
-This database can be used for:
-- Tracking house price trends over time.
-- Comparing price changes between different locations.
-- Visualizing YoY trends in Power BI or other BI tools.
-
+This project provides a solid foundation for analyzing and visualizing real estate trends. 🚀
