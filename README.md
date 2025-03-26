@@ -42,10 +42,3 @@ This database can be used for:
 - Comparing price changes between different locations.
 - Visualizing YoY trends in Power BI or other BI tools.
 
-## Next Steps
-- Upload the SQL script to GitHub.
-- Create Power BI visualizations.
-- Document insights and observations from the data analysis.
-
----
-This project provides a structured and efficient way to analyze house price indices over time. 🚀
