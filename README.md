@@ -29,7 +29,7 @@ The **House Price Index (HPI) Database Project** is designed to analyze trends i
 ### Tables:
 1. **hpi_monthly** – Stores monthly house price index data.
 2. **hpi_quarterly** – Stores quarterly house price index data.
-3. **hpi_master_test** – Contains raw imported data.
+3. **hpi_master_test** – A copy of the raw imported data.
 
 ## 📌 SQL Operations Used
 - **Database Creation**: `CREATE DATABASE house_db;`
@@ -44,4 +44,8 @@ The **House Price Index (HPI) Database Project** is designed to analyze trends i
 - Expand to include regional and national housing data.
 - Automate data updates using ETL pipelines.
 
+## 📥 Data Source
+The original dataset (`hpi_master.csv`) was sourced from [Data.gov](https://data.gov/). The `hpi_master_test` table is a copy of the raw imported data.
+
 This project provides a solid foundation for analyzing and visualizing real estate trends. 🚀
+
