@@ -45,6 +45,8 @@ YoY Calculation: Utilizes LAG() function and UPDATE queries.
 Data Cleaning: Handles NULL values and rounds calculations for consistency.
 
 📊 Insights from Power BI Visualizations
+
+
 🔍 Yearly YoY Change Analysis (Akron, OH)
 This dashboard provides a yearly perspective on house price trends in Akron, OH, focusing on YoY changes and long-term patterns.
 
