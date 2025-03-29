@@ -6,60 +6,67 @@
 
 
 📌 Overview
-The House Price Index (HPI) Database Project is designed to analyze trends in housing prices using structured SQL-based data processing. It involves data extraction, transformation, and analysis to track price changes over time on a monthly and quarterly basis, with insights visualized through Power BI dashboards.
+The House Price Index (HPI) Database Project is a SQL-based initiative designed to analyze housing price trends over time. It processes historical data to calculate year-over-year (YoY) changes on a monthly and quarterly basis, with insights visualized using Power BI dashboards. This project provides a foundation for understanding real estate market dynamics through structured data management and analytical tools.
+
 
 🎯 Objectives
 📂 Store and manage historical HPI data efficiently.
-📊 Calculate year-over-year (YoY) changes for both monthly and quarterly data.
+📊 Calculate year-over-year (YoY) changes for monthly and quarterly data.
 ✅ Ensure data integrity and structure for effective querying and visualization.
-📈 Provide insights into house price trends using analytical tools like Power BI.
+📈 Provide actionable insights into house price trends using Power BI.
 🛠️ Features
+
 🔹 Data Organization
-📌 Separates raw data into hpi_monthly and hpi_quarterly tables.
-⚡ Indexing for faster query performance.
-🔄 Dynamic column adjustments to accommodate different data formats.
+Separates raw data into hpi_monthly and hpi_quarterly tables for streamlined analysis.
+Implements indexing to enhance query performance.
+Supports dynamic column adjustments to handle varying data formats.
+
 🔹 Year-over-Year (YoY) Calculation
-📈 Uses LAG() function to compare prices from the same month/quarter in the previous year.
-🚀 Handles missing values to prevent calculation errors.
-🎯 Rounds results to two decimal places for clarity.
+Uses the LAG() function to compare prices from the same month/quarter in the previous year.
+Handles missing values to ensure accurate calculations.
+Rounds results to two decimal places for clarity.
+
 🔹 Scalability & Performance
-⚙️ Well-indexed database design.
-⚡ Structured queries for optimized retrieval.
-📊 Ready for integration with BI tools for visualization.
+Features a well-indexed database design for efficient data retrieval.
+Includes structured queries optimized for performance.
+Designed for seamless integration with BI tools like Power BI for visualization.
+
 📋 Database Schema
-Tables:
-hpi_monthly – Stores monthly house price index data.
-hpi_quarterly – Stores quarterly house price index data.
-hpi_master_test – A copy of the raw imported data.
-📌 SQL Operations Used
+Tables
+hpi_monthly: Stores monthly house price index data.
+hpi_quarterly: Stores quarterly house price index data.
+hpi_master_test: A copy of the raw imported data for reference.
+SQL Operations Used
 Database Creation: CREATE DATABASE house_db;
 Data Import: SELECT * FROM hpi_master_test;
-Table Creation: CREATE TABLE hpi_monthly (...) and CREATE TABLE hpi_quarterly (...);
+Table Creation: CREATE TABLE hpi_monthly (...); and CREATE TABLE hpi_quarterly (...);
 Data Insertion: INSERT INTO hpi_monthly (...) SELECT ... FROM hpi_master_test;
-YoY Calculation: Using LAG() function and UPDATE queries.
-Data Cleaning: Handling NULL values and rounding calculations.
+YoY Calculation: Utilizes LAG() function and UPDATE queries.
+Data Cleaning: Handles NULL values and rounds calculations for consistency.
+
 📊 Insights from Power BI Visualizations
 🔍 Yearly YoY Change Analysis (Akron, OH)
-This dashboard provides a yearly perspective on house price trends in Akron, OH, highlighting YoY changes and long-term patterns.
+This dashboard provides a yearly perspective on house price trends in Akron, OH, focusing on YoY changes and long-term patterns.
 
-Historical Volatility: Akron, OH, experienced significant fluctuations in YoY changes, with a peak of 133.49% in 1994 and a sharp decline to -24.59% in 1997, reflecting local market sensitivity to economic conditions.
-Long-Term Cooling: The "Trends in Yearly YoY (%) Change" chart shows a consistent decline in YoY growth since the 1980s, stabilizing at 10.23% in recent years, indicating a more balanced but slower growth trajectory.
-Localized Recovery Patterns: Akron saw a -14.89% YoY drop in 1991 but rebounded to 5.66% by 1992, showcasing resilience in the local housing market.
-Seasonal Adjustments Matter: The dashboard highlights a stark difference between Not Seasonally Adjusted (49.77%) and Seasonally Adjusted (95.02%) YoY changes, emphasizing the importance of accounting for seasonal effects.
-Economic Impact: Notable dips around the early 1990s and 2008 align with economic recessions, with Akron showing sharper local impacts.
+Historical Volatility: Akron, OH, shows significant fluctuations, with a peak YoY change of 133.49% in 1994 and a low of -24.59% in 1997, reflecting local market sensitivity to economic conditions.
+Long-Term Cooling: The "Trends in Yearly YoY (%) Change" chart indicates a consistent decline in YoY growth since the 1980s, stabilizing at 10.23% in recent years, suggesting a slower but more balanced growth trajectory.
+Localized Recovery Patterns: A -14.89% YoY drop in 1991 was followed by a rebound to 5.66% in 1992, highlighting resilience in Akron’s housing market.
+Seasonal Adjustments Matter: Not Seasonally Adjusted (49.77%) and Seasonally Adjusted (95.02%) YoY changes differ significantly, emphasizing the need for seasonal adjustments.
+Economic Impact: Dips around the early 1990s and 2008 align with economic recessions, with Akron experiencing sharper local impacts.
+
 🔍 Monthly YoY Change Analysis (East North Central Division)
 This dashboard focuses on monthly YoY changes in the East North Central Division, offering a broader regional perspective.
 
-Historical Peaks and Troughs: The "Monthly YoY Change (%) Over Time" chart shows a significant spike in the early 1980s, with YoY changes reaching nearly 40%, followed by a decline into negative territory by the late 1980s, likely tied to the early 1980s recession.
-Recent Stability: The "Trends in Monthly YoY Change" chart indicates a downward trend in YoY growth since the 1970s, stabilizing around 2.82% in recent years, suggesting a more balanced regional market.
-Seasonal Impact: A notable difference exists between Not Seasonally Adjusted (49.77%) and Seasonally Adjusted (95.02%) YoY changes, underscoring the need to account for seasonal fluctuations in monthly data.
-Monthly Variability: The table shows YoY changes in the early 1990s ranging from 0.00% (May 1991) to 2.72% (April 1992), indicating a period of slow but steady recovery post-recession.
-Regional Consistency: Compared to Akron’s yearly data, the East North Central Division shows less volatility, providing a more stable regional perspective.
+Historical Peaks and Troughs: The "Monthly YoY Change (%) Over Time" chart reveals a spike in the early 1980s (nearly 40%), followed by a decline into negative territory by the late 1980s, likely tied to the early 1980s recession.
+Recent Stability: The "Trends in Monthly YoY Change" chart shows a downward trend in YoY growth since the 1970s, stabilizing at 2.82% in recent years, indicating a more balanced regional market.
+Seasonal Impact: Not Seasonally Adjusted (49.77%) and Seasonally Adjusted (95.02%) YoY changes highlight the importance of accounting for seasonal fluctuations in monthly data.
+Monthly Variability: YoY changes in the early 1990s range from 0.00% (May 1991) to 2.72% (April 1992), reflecting a slow but steady recovery post-recession.
+Regional Consistency: Compared to Akron’s yearly data, the East North Central Division shows less volatility, providing a more stable regional view.
 Comparative Takeaways
-The East North Central Division’s monthly data offers a broader, less volatile view compared to Akron’s yearly data, highlighting the value of analyzing both regional and local trends.
-Both datasets emphasize the importance of seasonal adjustments, as unadjusted figures (49.77%) significantly differ from adjusted ones (95.02%), impacting trend interpretation.
+The East North Central Division’s monthly data offers a broader, less volatile perspective compared to Akron’s yearly data, underscoring the value of analyzing both regional and local trends.
+Seasonal adjustments are critical in both datasets, as unadjusted figures (49.77%) differ significantly from adjusted ones (95.02%), impacting trend interpretation.
 Economic events, such as recessions in the early 1990s and 2008, are evident in both datasets, with Akron showing more pronounced local impacts.
-📥 Data Source
-The original dataset (hpi_master.csv) was sourced from Data.gov. The hpi_master_test table is a copy of the raw imported data.
 
-🚀 Future Enhancements
+
+📥 Data Source
+The original dataset (hpi_master.csv) was sourced from Data.gov. The hpi_master_test table serves as a copy of the raw imported data.
