@@ -2,6 +2,8 @@
 
 ![Image](https://github.com/user-attachments/assets/cecea94e-ca91-45f6-b442-ff7bf5faf551)
 
+![Image](https://github.com/user-attachments/assets/94dfbdca-6b9c-441c-a939-05c0842459db)
+
 ## 📌 Overview
 The **House Price Index (HPI) Database Project** is designed to analyze trends in housing prices using structured SQL-based data processing. It involves data extraction, transformation, and analysis to track price changes over time on a **monthly** and **quarterly** basis.
 
