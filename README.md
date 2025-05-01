@@ -1,8 +1,7 @@
 # House Price Index (HPI) Database Project
 
-![image](https://github.com/user-attachments/assets/3e60fec9-9ea0-4c43-810a-39ddc6d7b02c)
+![image](https://github.com/user-attachments/assets/7cdc5fde-a1ab-42c5-8b27-f147985be2b2)
 
-![image](https://github.com/user-attachments/assets/49bba3b9-79d3-427a-960e-76db69998902)
 
 
 📌 Overview
