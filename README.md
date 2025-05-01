@@ -1,73 +1,84 @@
-# House Price Index (HPI) Database Project
+
+---
+
+# 🏡 House Sales Analysis (1975–2024)
 
 ![image](https://github.com/user-attachments/assets/7cdc5fde-a1ab-42c5-8b27-f147985be2b2)
 
+This project analyzes **house price growth trends** across U.S. states from **1975 to 2024** using historical index data stored in a **PostgreSQL database (`House_db`)**. The analysis focuses on **Montana**, with comparisons to other high-growth states like Utah, Washington, and Oregon.
 
+## 📊 Key Metrics (Montana)
+- **Percentage Growth:** 260.15%
+- **Total Growth:** 492.41
+- **Quarterly Growth:** 0.64
 
-📌 Overview
-The House Price Index (HPI) Database Project is a SQL-based initiative designed to analyze housing price trends over time. It processes historical data to calculate year-over-year (YoY) changes on a monthly and quarterly basis, with insights visualized using Power BI dashboards. This project provides a foundation for understanding real estate market dynamics through structured data management and analytical tools.
+## 📌 Key Insights
 
+### 🔝 Top Performing States (Total Growth)
+- **Montana**
+- **Utah**
+- **Washington**
+- **Oregon**
 
-🎯 Objectives
-📂 Store and manage historical HPI data efficiently.
-📊 Calculate year-over-year (YoY) changes for monthly and quarterly data.
-✅ Ensure data integrity and structure for effective querying and visualization.
-📈 Provide actionable insights into house price trends using Power BI.
-🛠️ Features
+Montana shows the **highest total growth**, highlighting its significant long-term appreciation in house values.
 
-🔹 Data Organization
-Separates raw data into hpi_monthly and hpi_quarterly tables for streamlined analysis.
-Implements indexing to enhance query performance.
-Supports dynamic column adjustments to handle varying data formats.
+### 📈 Quarterly Growth Leaders
+- **Utah** ranks first in quarterly growth, followed closely by **Montana** and **Colorado**.
+- Other strong performers: Oregon, Idaho, and Washington.
 
-🔹 Year-over-Year (YoY) Calculation
-Uses the LAG() function to compare prices from the same month/quarter in the previous year.
-Handles missing values to ensure accurate calculations.
-Rounds results to two decimal places for clarity.
+### 📉 Historical Trends
+- The **average seasonally adjusted index (`index_sa`)** illustrates steady house price growth with a sharp increase post-2000.
+- A dip around the early 1990s suggests possible market corrections or economic shifts.
 
-🔹 Scalability & Performance
-Features a well-indexed database design for efficient data retrieval.
-Includes structured queries optimized for performance.
-Designed for seamless integration with BI tools like Power BI for visualization.
+## 🗺️ Visualizations
 
-📋 Database Schema
-Tables
-hpi_monthly: Stores monthly house price index data.
-hpi_quarterly: Stores quarterly house price index data.
-hpi_master_test: A copy of the raw imported data for reference.
-SQL Operations Used
-Database Creation: CREATE DATABASE house_db;
-Data Import: SELECT * FROM hpi_master_test;
-Table Creation: CREATE TABLE hpi_monthly (...); and CREATE TABLE hpi_quarterly (...);
-Data Insertion: INSERT INTO hpi_monthly (...) SELECT ... FROM hpi_master_test;
-YoY Calculation: Utilizes LAG() function and UPDATE queries.
-Data Cleaning: Handles NULL values and rounds calculations for consistency.
+- **Bar Charts** for percentage and total growth
+- **Map** of top-performing states
+- **Quarterly Growth Rankings**
+- **Line Chart** of indexed price trends over time
 
-📊 Insights from Power BI Visualizations
+## 🛠️ Tools & Technologies
 
+| Tool         | Purpose                          |
+|--------------|----------------------------------|
+| PostgreSQL   | Data storage and querying (`House_db`) |
+| SQL          | Data transformation and calculation |
+| Power BI     | Data visualization and dashboarding |
+| GitHub       | Version control and collaboration |
 
-🔍 Yearly YoY Change Analysis (Akron, OH)
-This dashboard provides a yearly perspective on house price trends in Akron, OH, focusing on YoY changes and long-term patterns.
+## 🧾 Data Overview
+- **Database Name:** `House_db`
+- **Frequency:** Quarterly
+- **Index Used:** `index_sa` (Seasonally Adjusted)
+- **Time Period:** 1975 to 2024
+- **Data Source:** [gov.ie housing dataset (assumed)](https://www.gov.ie)
 
-Historical Volatility: Akron, OH, shows significant fluctuations, with a peak YoY change of 133.49% in 1994 and a low of -24.59% in 1997, reflecting local market sensitivity to economic conditions.
-Long-Term Cooling: The "Trends in Yearly YoY (%) Change" chart indicates a consistent decline in YoY growth since the 1980s, stabilizing at 10.23% in recent years, suggesting a slower but more balanced growth trajectory.
-Localized Recovery Patterns: A -14.89% YoY drop in 1991 was followed by a rebound to 5.66% in 1992, highlighting resilience in Akron’s housing market.
-Seasonal Adjustments Matter: Not Seasonally Adjusted (49.77%) and Seasonally Adjusted (95.02%) YoY changes differ significantly, emphasizing the need for seasonal adjustments.
-Economic Impact: Dips around the early 1990s and 2008 align with economic recessions, with Akron experiencing sharper local impacts.
+## 📁 Project Structure
+```bash
+├── sql/
+│   └── house_growth_analysis.sql
+├── visuals/
+│   └── dashboard.png
+├── README.md
+```
 
-🔍 Monthly YoY Change Analysis (East North Central Division)
-This dashboard focuses on monthly YoY changes in the East North Central Division, offering a broader regional perspective.
+## 🚀 How to Use
 
-Historical Peaks and Troughs: The "Monthly YoY Change (%) Over Time" chart reveals a spike in the early 1980s (nearly 40%), followed by a decline into negative territory by the late 1980s, likely tied to the early 1980s recession.
-Recent Stability: The "Trends in Monthly YoY Change" chart shows a downward trend in YoY growth since the 1970s, stabilizing at 2.82% in recent years, indicating a more balanced regional market.
-Seasonal Impact: Not Seasonally Adjusted (49.77%) and Seasonally Adjusted (95.02%) YoY changes highlight the importance of accounting for seasonal fluctuations in monthly data.
-Monthly Variability: YoY changes in the early 1990s range from 0.00% (May 1991) to 2.72% (April 1992), reflecting a slow but steady recovery post-recession.
-Regional Consistency: Compared to Akron’s yearly data, the East North Central Division shows less volatility, providing a more stable regional view.
-Comparative Takeaways
-The East North Central Division’s monthly data offers a broader, less volatile perspective compared to Akron’s yearly data, underscoring the value of analyzing both regional and local trends.
-Seasonal adjustments are critical in both datasets, as unadjusted figures (49.77%) differ significantly from adjusted ones (95.02%), impacting trend interpretation.
-Economic events, such as recessions in the early 1990s and 2008, are evident in both datasets, with Akron showing more pronounced local impacts.
+1. **Clone this repository**  
+   `git clone https://github.com/your-username/house-sales-analysis.git`
 
+2. **Import the SQL dataset** into PostgreSQL as `House_db`.
 
-📥 Data Source
-The original dataset (hpi_master.csv) was sourced from Data.gov. The hpi_master_test table serves as a copy of the raw imported data.
+3. **Run analysis queries** from `sql/house_growth_analysis.sql`.
+
+4. **Open the Power BI dashboard** to explore visualizations.
+
+5. **Adjust filters by state, year, or index type** to explore trends.
+
+## 🎯 Key Learning
+
+This project highlights how combining **SQL querying in PostgreSQL** with **Power BI dashboards** enables deep, visually-driven insights into long-term trends in the U.S. housing market.
+
+---
+
+Would you like me to help write the SQL queries section too, or export this as a downloadable markdown file?
