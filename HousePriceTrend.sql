@@ -1,7 +1,3 @@
--- Housing Price Trends Over Time (State-Level)
--- date on x axis 
--- index_sa on y axis
--- place name on the legend 
 
 
 create index idx_housing_trends_state
