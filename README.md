@@ -5,23 +5,26 @@
 
 ![image](https://github.com/user-attachments/assets/7cdc5fde-a1ab-42c5-8b27-f147985be2b2)
 
-This project analyzes **house price growth trends** across U.S. states from **1975 to 2024** using historical index data stored in a **PostgreSQL database (`House_db`)**. The analysis focuses on **Montana**, with comparisons to other high-growth states like Utah, Washington, and Oregon.
+This project explores house price growth trends across U.S. states from 1975 to 2024, using historical index data stored in a PostgreSQL database (House_db). The analysis places a spotlight on Montana, with comparisons to other high-growth states such as Utah, Washington, and Oregon.
 
-## 📊 Key Metrics (Montana)
-- **Percentage Growth:** 260.15%
-- **Total Growth:** 492.41
-- **Quarterly Growth:** 0.64
+📊 Montana Housing Market Metrics
+Percentage Growth: 260.15%
 
-## 📌 Key Insights
+Total Index Growth: 492.41
 
-### 🔝 Top Performing States (Total Growth)
-- **Montana**
-- **Utah**
-- **Washington**
-- **Oregon**
+Average Quarterly Growth: 0.64
 
-Montana shows the **highest total growth**, highlighting its significant long-term appreciation in house values.
+📌 Key Findings
+🔝 Highest Total Growth (1975–2024)
+Montana
 
+Utah
+
+Washington
+
+Oregon
+
+Montana leads all states in total index growth, underscoring its strong long-term increase in housing values and making it a standout in the national housing market.
 ### 📈 Quarterly Growth Leaders
 - **Utah** ranks first in quarterly growth, followed closely by **Montana** and **Colorado**.
 - Other strong performers: Oregon, Idaho, and Washington.
