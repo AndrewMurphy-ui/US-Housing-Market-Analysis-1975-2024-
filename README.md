@@ -1,8 +1,6 @@
 # 🏠 Housing Data Pipeline Service (1975–2024)
 
-An automated backend service for ingesting, validating, and serving long-term U.S. housing market data through a stable HTTP API.  
-This project focuses on **data reliability, workflow automation, and production awareness**, rather than one-off analysis or dashboards.
-
+An automated backend system that ingests, validates, and serves long-term U.S. housing market data through a stable HTTP API. The project emphasizes data reliability, automated workflows, and production-ready infrastructure rather than one-off analysis or visualization.
 ---
 
 ## 🚩 Problem Statements
